@@ -1,7 +1,7 @@
 {
   "name": "everforest-gogh",
   "displayName": "Everforest (Gogh)",
-  "description": "Six Everforest color schemes (Dark/Light × Hard/Medium/Soft) ported from the Gogh-Co terminal color schemes, tuned for the Visual Studio Code interface.",
+  "description": "Six Everforest color schemes (Dark/Light × Hard/Medium/Soft) for VS Code",
   "version": "0.1.0",
   "publisher": "Frost-rA9",
   "author": "Everforest (Gogh) contributors",
