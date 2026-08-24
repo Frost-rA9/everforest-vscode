@@ -1,5 +1,8 @@
 # Everforest (Gogh)
 
+[![Visual Studio Marketplace Version](https://img.shields.io/vscode-marketplace/v/Frost-rA9.everforest-vscode.svg?label=Marketplace&color=%23a7c080)](https://marketplace.visualstudio.com/items?itemName=Frost-rA9.everforest-vscode)
+[![Visual Studio Marketplace Downloads](https://img.shields.io/vscode-marketplace/d/Frost-rA9.everforest-vscode.svg?label=Downloads&color=%237fbbb3)](https://marketplace.visualstudio.com/items?itemName=Frost-rA9.everforest-vscode)
+
 > Six Everforest color schemes (Dark/Light × Hard/Medium/Soft) for VS Code.
 
 Warm, soft and eye-friendly — the 16 terminal ANSI colors match the original
@@ -30,8 +33,8 @@ Warm, soft and eye-friendly — the 16 terminal ANSI colors match the original
 
 ## Quick Start
 
-1. Grab the latest `.vsix` from the [Releases](https://github.com/Frost-rA9/everforest-vscode/releases) page
-2. Install: `code --install-extension everforest-gogh-<version>.vsix`
+1. **Marketplace**：VSCode 扩展面板搜索 `Everforest (Gogh)` → Install
+2. **VSIX**：从 [Releases](https://github.com/Frost-rA9/everforest-vscode/releases) 下载 → `code --install-extension everforest-gogh-<version>.vsix`
 3. Press `Ctrl+K Ctrl+T` and pick a variant
 
 ## Contributing

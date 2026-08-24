@@ -13,3 +13,8 @@
   base palettes, required workbench keys
 - Mock VSCode layout preview (`scripts/dev/preview.mjs`) for visual iteration
 - Docs: `AGENTS.md`, `docs/engineering-plan.md`, README, LICENSE (MIT)
+
+### Published
+
+- **v0.1.0 released on the VS Code Marketplace** (extension id
+  `Frost-rA9.everforest-vscode`) and GitHub Releases
