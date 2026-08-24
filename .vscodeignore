@@ -1,0 +1,12 @@
+.git/**
+.gitignore
+.vscodeignore
+.pi/**
+AGENTS.md
+docs/**
+scripts/**
+node_modules/**
+**/*.map
+**/.eslintrc*
+**/.prettierrc*
+**/*.log

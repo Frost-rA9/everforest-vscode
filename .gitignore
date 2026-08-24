@@ -1,0 +1,10 @@
+node_modules/
+*.vsix
+.DS_Store
+
+# pi agent session state
+.pi/
+
+# project-local docs & agent instructions (kept out of the repo)
+AGENTS.md
+docs/

@@ -1,0 +1,46 @@
+// Semantic token color mappings. Lightweight set following the same
+// role→color conventions as the TextMate rules above.
+import { alpha } from "../lib/color.mjs";
+
+/** @param {import("./derived.mjs").Derived} d */
+export function getSemantic(d) {
+  return {
+    "keyword": { foreground: d.red },
+    "keyword.control": { foreground: d.red },
+    "keyword.operator": { foreground: d.orange },
+    "keyword.operator.new": { foreground: d.red },
+    "keyword.operator.delete": { foreground: d.red },
+    "storage.type": { foreground: d.orange },
+    "storage.modifier": { foreground: d.orange },
+    "string": { foreground: d.yellow },
+    "string.escape": { foreground: d.green },
+    "number": { foreground: d.magenta },
+    "boolean": { foreground: d.magenta },
+    "function": { foreground: d.green },
+    "method": { foreground: d.green },
+    "function.declaration": { foreground: d.green },
+    "type": { foreground: d.blue },
+    "class": { foreground: d.blue },
+    "interface": { foreground: d.blue },
+    "enum": { foreground: d.blue },
+    "namespace": { foreground: d.cyan },
+    "module": { foreground: d.cyan },
+    "property": { foreground: d.fg },
+    "variable": { foreground: d.fg },
+    "parameter": { foreground: d.fg },
+    "constant": { foreground: d.magenta },
+    "comment": { foreground: d.comment, fontStyle: "italic" },
+    "macro": { foreground: d.magenta },
+    "label": { foreground: d.cyan },
+    "decorator": { foreground: d.cyan },
+    "annotation": { foreground: d.cyan },
+    "event": { foreground: d.yellow },
+    "enumMember": { foreground: d.fg },
+    "typeParameter": { foreground: d.blue },
+    "member": { foreground: d.fg },
+    "attribute": { foreground: d.yellow },
+    "warning": { foreground: d.warning },
+    "error": { foreground: d.error },
+    "readonly": { foreground: alpha(d.fg, 0.8) },
+  };
+}

@@ -1,0 +1,80 @@
+{
+  "name": "everforest-gogh",
+  "displayName": "Everforest (Gogh)",
+  "description": "Six Everforest color schemes (Dark/Light × Hard/Medium/Soft) ported from the Gogh-Co terminal color schemes, tuned for the Visual Studio Code interface.",
+  "version": "0.1.0",
+  "publisher": "Frost-rA9",
+  "author": "Everforest (Gogh) contributors",
+  "homepage": "https://github.com/Gogh-Co/Gogh",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frost-rA9/everforest-vscode.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "everforest",
+    "theme",
+    "color scheme",
+    "gogh"
+  ],
+  "galleryBanner": {
+    "color": "#2d353b",
+    "theme": "dark"
+  },
+  "icon": "icon.png",
+  "categories": [
+    "Themes"
+  ],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Everforest Dark (Hard)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/everforest-dark-hard.json"
+      },
+      {
+        "label": "Everforest Dark (Medium)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/everforest-dark-medium.json"
+      },
+      {
+        "label": "Everforest Dark (Soft)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/everforest-dark-soft.json"
+      },
+      {
+        "label": "Everforest Light (Hard)",
+        "uiTheme": "vs",
+        "path": "./themes/everforest-light-hard.json"
+      },
+      {
+        "label": "Everforest Light (Medium)",
+        "uiTheme": "vs",
+        "path": "./themes/everforest-light-medium.json"
+      },
+      {
+        "label": "Everforest Light (Soft)",
+        "uiTheme": "vs",
+        "path": "./themes/everforest-light-soft.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate.mjs",
+    "preview": "node scripts/dev/preview.mjs",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^2.15.0"
+  }
+}
