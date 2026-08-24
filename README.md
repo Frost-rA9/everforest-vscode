@@ -1,30 +1,43 @@
 # Everforest (Gogh)
 
-> Six Everforest color schemes (Dark/Light × Hard/Medium/Soft), ported from the
-> [Gogh-Co](https://github.com/Gogh-Co/Gogh) terminal color schemes and tuned
-> for Visual Studio Code. Warm, soft and easy on the eyes.
+> Six Everforest color schemes (Dark/Light × Hard/Medium/Soft) for VS Code.
+
+Warm, soft and eye-friendly — the 16 terminal ANSI colors match the original
+[Gogh-Co](https://github.com/Gogh-Co/Gogh) Everforest palettes exactly.
+
+![Everforest Dark (Medium)](images/everforest-dark-medium.png)
+
+![Everforest Light (Medium)](images/everforest-light-medium.png)
+
+## Features
+
+- 🌿 **Warm, nature-inspired palette** — low contrast, gentle on the eyes
+- 🌓 **Six variants** — Dark/Light × Hard/Medium/Soft for any ambient light
+- 🎯 **Semantic highlighting** — syntax, HTML/CSS, Markdown and terminal all tuned
+- 🖥️ **Faithful terminal colors** — the exact Gogh-Co 16-color ANSI palette
+- 🌙 **Blue-light friendly** — pairs well with f.lux / Redshift
 
 ## Themes
 
-| Theme | Type |
-|---|---|
-| Everforest Dark (Hard) | dark |
-| Everforest Dark (Medium) | dark |
-| Everforest Dark (Soft) | dark |
-| Everforest Light (Hard) | light |
-| Everforest Light (Medium) | light |
-| Everforest Light (Soft) | light |
+| Theme | Type | Note |
+|---|---|---|
+| Everforest Dark (Hard) | dark | highest contrast |
+| Everforest Dark (Medium) | dark | balanced (default) |
+| Everforest Dark (Soft) | dark | softest for long sessions |
+| Everforest Light (Hard) | light | highest contrast |
+| Everforest Light (Medium) | light | balanced (default) |
+| Everforest Light (Soft) | light | softest for long sessions |
 
-Pick a theme with `Ctrl+K Ctrl+T`. The 16 terminal ANSI colors match the
-original Gogh-Co Everforest palettes exactly.
+## Quick Start
 
-## Install
+1. Install the `.vsix`: `code --install-extension everforest-gogh-<version>.vsix`
+2. Press `Ctrl+K Ctrl+T` and pick a variant
 
-Install the `.vsix` package:
+## Contributing
 
-```
-code --install-extension everforest-gogh-<version>.vsix
-```
+Tweak the derived colors in `scripts/templates/derived.mjs`, then
+`npm run build` to regenerate the 6 theme files. See `AGENTS.md` for
+conventions.
 
 ## Credits
 
