@@ -30,8 +30,9 @@ Warm, soft and eye-friendly — the 16 terminal ANSI colors match the original
 
 ## Quick Start
 
-1. Install the `.vsix`: `code --install-extension everforest-gogh-<version>.vsix`
-2. Press `Ctrl+K Ctrl+T` and pick a variant
+1. Grab the latest `.vsix` from the [Releases](https://github.com/Frost-rA9/everforest-vscode/releases) page
+2. Install: `code --install-extension everforest-gogh-<version>.vsix`
+3. Press `Ctrl+K Ctrl+T` and pick a variant
 
 ## Contributing
 
