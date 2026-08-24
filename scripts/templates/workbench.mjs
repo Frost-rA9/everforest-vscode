@@ -218,6 +218,15 @@ export function getWorkbench(d, p) {
   c["settings.headerForeground"] = d.fg;
   c["settings.modifiedItemIndicator"] = d.yellow;
 
+  // ---- Markdown rendering (extensions detail page, markdown preview) ----
+  c["textBlockQuote.background"] = d.bg2;
+  c["textBlockQuote.border"] = alpha(d.green, 0.5);
+  c["textCodeBlock.background"] = d.bg1;
+  c["textLink.foreground"] = d.blue;
+  c["textLink.activeForeground"] = d.green;
+  c["textPreformat.foreground"] = d.fg;
+  c["textSeparator.foreground"] = d.bg3;
+
   // ---- Diff / git decorations ----
   c["diffEditor.insertedTextBackground"] = alpha(d.green, 0.15);
   c["diffEditor.removedTextBackground"] = alpha(d.red, 0.15);
