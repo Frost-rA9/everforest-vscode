@@ -1,9 +1,6 @@
 # Everforest (Gogh)
 
-[![Visual Studio Marketplace Version](https://img.shields.io/vscode-marketplace/v/Frost-rA9.everforest-vscode.svg?label=Marketplace&color=%23a7c080)](https://marketplace.visualstudio.com/items?itemName=Frost-rA9.everforest-vscode)
-[![Visual Studio Marketplace Downloads](https://img.shields.io/vscode-marketplace/d/Frost-rA9.everforest-vscode.svg?label=Downloads&color=%237fbbb3)](https://marketplace.visualstudio.com/items?itemName=Frost-rA9.everforest-vscode)
-
-> Six Everforest color schemes (Dark/Light × Hard/Medium/Soft) for VS Code.
+Six Everforest color schemes (Dark/Light × Hard/Medium/Soft) for VS Code.
 
 Warm, soft and eye-friendly — the 16 terminal ANSI colors match the original
 [Gogh-Co](https://github.com/Gogh-Co/Gogh) Everforest palettes exactly.
