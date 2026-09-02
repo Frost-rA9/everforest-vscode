@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.2.0] - 2026-09-03
+
+### Added
+
+- Expanded Workbench coverage for editor groups, folds, bracket matching, Peek
+  View, diagnostics, debugging, charts, and terminal selection.
+- Added syntax highlighting for Rust, Go, Shell, Dockerfile, YAML, TOML, and
+  Diff while preserving the shared Gogh color semantics.
+- Added language-specific semantic token mappings for TypeScript, Python, and
+  Rust.
+- Added contrast checks for primary text, comments, and line numbers, plus
+  validation for the new UI color roles.
+- Documented the VS Code + integrated terminal + terminal-based agent workflow
+  as the project's primary use case.
+
 ## [0.1.1] - 2026-08-24
 
 ### Fixed
