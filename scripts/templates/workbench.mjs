@@ -102,7 +102,18 @@ export function getWorkbench(d, p) {
   c["editorHoverWidget.foreground"] = d.fg;
   c["editorHoverWidget.border"] = d.bg3;
   c["editorGroupHeader.tabsBackground"] = d.bg;
+  c["editorGroupHeader.noTabsBackground"] = d.bg;
+  c["editorGroup.emptyBackground"] = d.bg;
+  c["editorGroup.dropBackground"] = alpha(d.green, 0.12);
   c["editorGroup.border"] = d.bg3;
+  c["editorPane.background"] = d.bg;
+  c["editorCodeLens.foreground"] = d.comment;
+  c["editor.foldBackground"] = alpha(d.green, 0.08);
+  c["editor.foldPlaceholderForeground"] = d.comment;
+  c["editorBracketMatch.background"] = alpha(d.green, 0.14);
+  c["editorBracketMatch.border"] = d.green;
+  c["editorRuler.foreground"] = alpha(d.bg3, 0.65);
+  c["editorWidget.resizeBorder"] = d.green;
 
   // ---- Sidebar ----
   c["sideBar.background"] = d.bg1;
@@ -111,6 +122,7 @@ export function getWorkbench(d, p) {
   c["sideBarSectionHeader.background"] = d.bg1;
   c["sideBarSectionHeader.foreground"] = d.comment;
   c["sideBarSectionHeader.border"] = d.bg3;
+  c["sideBar.border"] = d.bg3;
 
   // ---- Activity bar ----
   c["activityBar.background"] = d.bg0;
@@ -125,6 +137,7 @@ export function getWorkbench(d, p) {
   c["titleBar.activeForeground"] = d.fg;
   c["titleBar.inactiveBackground"] = d.bg0;
   c["titleBar.inactiveForeground"] = d.comment;
+  c["titleBar.border"] = d.bg3;
 
   // ---- Status bar ----
   c["statusBar.background"] = d.bg0;
@@ -158,7 +171,12 @@ export function getWorkbench(d, p) {
   c["tab.border"] = d.bg3;
   c["tab.hoverBackground"] = d.bg2;
   c["tab.unfocusedActiveBackground"] = d.bg;
+  c["tab.unfocusedActiveForeground"] = d.comment;
   c["tab.unfocusedInactiveBackground"] = d.bg1;
+  c["tab.unfocusedInactiveForeground"] = d.comment;
+  c["tab.activeModifiedBorder"] = d.yellow;
+  c["tab.inactiveModifiedBorder"] = alpha(d.yellow, 0.7);
+  c["tab.lastPinnedBorder"] = d.bg4;
 
   // ---- Inputs / controls ----
   c["input.background"] = d.bg1;
@@ -182,6 +200,7 @@ export function getWorkbench(d, p) {
   c["button.background"] = d.bg3;
   c["button.foreground"] = d.fg;
   c["button.hoverBackground"] = d.bg4;
+  c["button.border"] = d.bg5;
   c["button.secondaryBackground"] = d.bg1;
   c["button.secondaryForeground"] = d.fg;
   c["button.secondaryHoverBackground"] = d.bg2;
@@ -199,6 +218,9 @@ export function getWorkbench(d, p) {
   c["list.focusOutline"] = d.green;
   c["list.highlightForeground"] = d.green;
   c["list.invalidItemForeground"] = d.error;
+  c["list.deemphasizedForeground"] = d.comment;
+  c["list.filterMatchBackground"] = d.findMatch;
+  c["list.filterMatchBorder"] = d.yellow;
   c["listFilterWidget.background"] = d.bg1;
   c["listFilterWidget.outline"] = d.green;
   c["menu.background"] = d.bg1;
@@ -206,6 +228,7 @@ export function getWorkbench(d, p) {
   c["menu.selectionBackground"] = d.bg3;
   c["menu.selectionForeground"] = d.fg;
   c["menu.border"] = d.bg3;
+  c["menu.separatorBackground"] = d.bg3;
   c["quickInput.background"] = d.bg1;
   c["quickInput.foreground"] = d.fg;
   c["pickerGroup.foreground"] = d.comment;
@@ -217,6 +240,21 @@ export function getWorkbench(d, p) {
   c["breadcrumb.activeSelectionForeground"] = d.fg;
   c["settings.headerForeground"] = d.fg;
   c["settings.modifiedItemIndicator"] = d.yellow;
+  c["breadcrumb.background"] = d.bg1;
+  c["breadcrumbPicker.background"] = d.bg1;
+
+  // ---- Peek view / inline tooling ----
+  c["peekView.border"] = d.green;
+  c["peekViewEditor.background"] = d.bg1;
+  c["peekViewEditor.matchHighlightBackground"] = d.findMatch;
+  c["peekViewResult.background"] = d.bg1;
+  c["peekViewResult.fileForeground"] = d.fg;
+  c["peekViewResult.lineForeground"] = d.comment;
+  c["peekViewResult.selectionBackground"] = d.bg3;
+  c["peekViewResult.selectionForeground"] = d.fg;
+  c["peekViewTitle.background"] = d.bg0;
+  c["peekViewTitleDescription.foreground"] = d.comment;
+  c["peekViewTitleLabel.foreground"] = d.fg;
 
   // ---- Markdown rendering (extensions detail page, markdown preview) ----
   c["textBlockQuote.background"] = d.bg2;
@@ -238,6 +276,34 @@ export function getWorkbench(d, p) {
   c["gitDecoration.deletedResourceForeground"] = d.red;
   c["gitDecoration.untrackedResourceForeground"] = d.cyan;
   c["gitDecoration.conflictingResourceForeground"] = d.magenta;
+  c["gitDecoration.ignoredResourceForeground"] = d.comment;
+
+  // ---- Notifications / problems / debug ----
+  c["notificationCenterHeader.background"] = d.bg1;
+  c["notificationCenterHeader.foreground"] = d.fg;
+  c["notificationLink.foreground"] = d.blue;
+  c["problemsErrorIcon.foreground"] = d.error;
+  c["problemsWarningIcon.foreground"] = d.warning;
+  c["problemsInfoIcon.foreground"] = d.info;
+  c["debugConsole.errorForeground"] = d.error;
+  c["debugConsole.warningForeground"] = d.warning;
+  c["debugConsole.infoForeground"] = d.info;
+  c["debugConsole.sourceForeground"] = d.comment;
+  c["debugToolBar.background"] = d.bg1;
+  c["debugToolBar.border"] = d.bg3;
+
+  // ---- Charts / terminal integration ----
+  c["charts.foreground"] = d.fg;
+  c["charts.red"] = d.red;
+  c["charts.orange"] = d.orange;
+  c["charts.yellow"] = d.yellow;
+  c["charts.green"] = d.green;
+  c["charts.blue"] = d.blue;
+  c["charts.purple"] = d.magenta;
+  c["terminal.border"] = d.bg3;
+  c["terminal.selectionBackground"] = d.selection;
+  c["terminal.inactiveSelectionBackground"] = d.selectionInactive;
+  c["terminal.findMatchHighlightBackground"] = d.findMatch;
 
   // ---- Notifications / minimap ----
   c["notificationCenter.border"] = d.bg3;

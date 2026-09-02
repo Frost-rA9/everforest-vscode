@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { paletteIds, getPalette } from "./palette/index.mjs";
-import { hexToRgba } from "./lib/color.mjs";
+import { contrast, hexToRgba } from "./lib/color.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -37,6 +37,10 @@ const requiredColors = [
   "terminal.foreground",
   "editorLineNumber.foreground",
   "editor.selectionBackground",
+  "editorBracketMatch.background",
+  "editorBracketMatch.border",
+  "sideBar.border",
+  "terminal.selectionBackground",
 ];
 
 const HEX_RE = /^#[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$/;
@@ -79,6 +83,21 @@ for (const id of paletteIds) {
   // Required workbench keys
   for (const key of requiredColors) {
     if (!(key in theme.colors)) fail(`missing color key: ${key}`);
+  }
+
+  // Primary and secondary text must remain readable against the editor surface.
+  const commentForeground = theme.tokenColors.find((rule) => rule.name === "Comment")
+    ?.settings?.foreground;
+  const contrastChecks = [
+    ["editor.foreground", theme.colors["editor.foreground"], theme.colors["editor.background"], 4.5],
+    ["editorLineNumber.activeForeground", theme.colors["editorLineNumber.activeForeground"], theme.colors["editor.background"], 3.0],
+    ["Comment", commentForeground, theme.colors["editor.background"], 2.9],
+    ["editorLineNumber.foreground", theme.colors["editorLineNumber.foreground"], theme.colors["editor.background"], 2.0],
+  ];
+  for (const [name, foreground, background, minimum] of contrastChecks) {
+    if (foreground && background && contrast(foreground, background) < minimum) {
+      fail(`${name} contrast should be >= ${minimum}, got ${contrast(foreground, background).toFixed(2)}`);
+    }
   }
 
   // All colors must be valid hex (6 or 8 digits)

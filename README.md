@@ -5,6 +5,10 @@ Six Everforest color schemes (Dark/Light × Hard/Medium/Soft) for VS Code.
 Warm, soft and eye-friendly — the 16 terminal ANSI colors match the original
 [Gogh-Co](https://github.com/Gogh-Co/Gogh) Everforest palettes exactly.
 
+Designed for the **VS Code + integrated terminal + terminal-based agent** workflow:
+terminal colors stay faithful to Gogh, while the editor and workbench extend the
+same color semantics without competing with the TUI.
+
 ![Everforest Dark (Medium)](images/everforest-dark-medium.png)
 
 ![Everforest Light (Medium)](images/everforest-light-medium.png)
@@ -16,6 +20,7 @@ Warm, soft and eye-friendly — the 16 terminal ANSI colors match the original
 - 🎯 **Semantic highlighting** — syntax, HTML/CSS, Markdown and terminal all tuned
 - 🖥️ **Faithful terminal colors** — the exact Gogh-Co 16-color ANSI palette
 - 🌙 **Blue-light friendly** — pairs well with f.lux / Redshift
+- 🔁 **Terminal-to-editor consistency** — shared color semantics for VS Code and agent TUIs
 
 ## Themes
 

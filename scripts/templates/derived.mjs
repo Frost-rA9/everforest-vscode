@@ -19,6 +19,7 @@ export function getDerived(p) {
   const bg2 = dark ? mix(bg, fg, 0.05) : mix(bg, fg, 0.08); // hover / active
   const bg3 = dark ? mix(bg, fg, 0.12) : mix(bg, fg, 0.16); // borders
   const bg4 = dark ? mix(bg, fg, 0.24) : mix(bg, fg, 0.26); // strong border
+  const bg5 = dark ? mix(bg, fg, 0.34) : mix(bg, fg, 0.36); // control hover / emphasis
 
   // Selection & highlights
   const selection = dark ? mix(bg, fg, 0.18) : mix(bg, fg, 0.16);
@@ -29,8 +30,11 @@ export function getDerived(p) {
   const lineHighlight = dark ? mix(bg, fg, 0.03) : mix(bg, fg, 0.035);
 
   // Text roles
-  const comment = dark ? p.grey : mix(fg, bg, 0.3); // light: lift the grey
-  const lineNumber = dark ? p.grey : mix(fg, bg, 0.38);
+  // Keep secondary text readable without turning it into a full-strength accent.
+  // The terminal grey is a useful starting point, but VS Code needs a little
+  // more separation for comments, labels, and inactive UI text.
+  const comment = dark ? mix(p.grey, fg, 0.3) : mix(p.grey, bg, 0.4);
+  const lineNumber = dark ? mix(p.grey, fg, 0.12) : mix(p.grey, bg, 0.5);
   const lineNumberActive = dark ? fg : mix(fg, bg, 0.15);
   const orange = mix(p.red, p.yellow, 0.5); // operators / storage
   const dim = (c) => mix(c, bg, dark ? 0.3 : 0.3); // muted accents
@@ -49,6 +53,7 @@ export function getDerived(p) {
     bg2,
     bg3,
     bg4,
+    bg5,
     selection,
     selectionInactive,
     wordHighlight,

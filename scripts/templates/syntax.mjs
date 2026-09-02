@@ -242,5 +242,123 @@ export function getSyntax(d) {
       scope: "variable.parameter.function.python",
       settings: { foreground: d.fg },
     },
+
+    // ---- Rust / Go ----
+    {
+      name: "Rust type",
+      scope: "entity.name.type.rust, support.type.rust",
+      settings: { foreground: d.blue },
+    },
+    {
+      name: "Rust function",
+      scope: "entity.name.function.rust, support.function.rust",
+      settings: { foreground: d.green },
+    },
+    {
+      name: "Rust storage",
+      scope: "storage.type.rust, storage.modifier.rust",
+      settings: { foreground: d.orange },
+    },
+    {
+      name: "Rust module",
+      scope: "entity.name.namespace.rust, storage.type.module.rust",
+      settings: { foreground: d.cyan },
+    },
+    {
+      name: "Go type",
+      scope: "entity.name.type.go, support.type.go",
+      settings: { foreground: d.blue },
+    },
+    {
+      name: "Go function",
+      scope: "entity.name.function.go, support.function.go",
+      settings: { foreground: d.green },
+    },
+    {
+      name: "Go package",
+      scope: "entity.name.package.go, keyword.import.go, keyword.package.go",
+      settings: { foreground: d.cyan },
+    },
+
+    // ---- Shell / Dockerfile ----
+    {
+      name: "Shell builtin",
+      scope: "support.function.builtin.shell, support.function.unix.shell",
+      settings: { foreground: d.yellow },
+    },
+    {
+      name: "Shell variable",
+      scope: "variable.other.normal.shell, variable.other.special.shell, variable.other.positional.shell",
+      settings: { foreground: d.magenta },
+    },
+    {
+      name: "Shell string",
+      scope: "string.quoted.double.shell, string.quoted.single.shell, string.unquoted.heredoc.shell",
+      settings: { foreground: d.green },
+    },
+    {
+      name: "Dockerfile instruction",
+      scope: "keyword.other.instruction.dockerfile, entity.name.function.dockerfile",
+      settings: { foreground: d.orange },
+    },
+    {
+      name: "Dockerfile image",
+      scope: "entity.name.type.base-image.dockerfile, entity.name.image.dockerfile",
+      settings: { foreground: d.magenta }
+    },
+
+    // ---- YAML / TOML ----
+    {
+      name: "YAML key",
+      scope: "entity.name.tag.yaml, variable.other.key.yaml, support.type.property-name.yaml",
+      settings: { foreground: d.yellow },
+    },
+    {
+      name: "YAML string",
+      scope: "string.unquoted.plain.out.yaml, string.quoted.single.yaml, string.quoted.double.yaml, string.unquoted.block.yaml",
+      settings: { foreground: d.green },
+    },
+    {
+      name: "YAML anchor",
+      scope: "punctuation.definition.anchor.yaml, punctuation.definition.block.sequence.item.yaml",
+      settings: { foreground: d.cyan },
+    },
+    {
+      name: "TOML key",
+      scope: "keyword.key.toml, entity.other.attribute-name.table.toml",
+      settings: { foreground: d.orange },
+    },
+    {
+      name: "TOML string",
+      scope: "string.quoted.single.basic.line.toml, string.quoted.single.literal.line.toml",
+      settings: { foreground: d.green },
+    },
+    {
+      name: "TOML boolean",
+      scope: "constant.other.boolean.toml",
+      settings: { foreground: d.blue },
+    },
+
+    // ---- Diff ----
+    {
+      name: "Diff added",
+      scope: "markup.inserted.diff, punctuation.definition.inserted.diff",
+      settings: { foreground: d.green },
+    },
+    {
+      name: "Diff removed",
+      scope: "markup.deleted.diff, punctuation.definition.deleted.diff",
+      settings: { foreground: d.red },
+    },
+    {
+      name: "Diff changed",
+      scope: "markup.changed.diff, punctuation.definition.changed.diff",
+      settings: { foreground: d.blue },
+    },
+    {
+      name: "Diff range",
+      scope: "meta.diff.range.context, punctuation.definition.range.diff",
+      settings: { foreground: d.orange },
+    },
   ];
 }
