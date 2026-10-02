@@ -59,9 +59,17 @@ extension is a maintained remaster built on the same palette:
 
 ![Everforest Light (Medium)](images/everforest-light-medium.png)
 
-<!-- TODO(shots): add terminal-palette, diff-view and remaining contrast levels
-     once real VS Code screenshots are captured (images/everforest-terminal.png,
-     images/everforest-diff.png, images/everforest-{dark,light}-{hard,soft}.png). -->
+### Terminal palette
+
+Normal and bright groups rendered side by side in the integrated terminal.
+
+![Everforest terminal palette](images/everforest-terminal.png)
+
+### Diff view
+
+Inserted lines pick up the upstream `Background Green` tint.
+
+![Everforest diff view](images/everforest-diff.png)
 
 ## Installation
 

@@ -50,9 +50,17 @@ workbench 界面与 16 色终端调色板都由它派生，没有手工微调的
 
 ![Everforest Light (Medium)](images/everforest-light-medium.png)
 
-<!-- TODO(shots): 真实 VS Code 截图就绪后补充终端调色板、diff 视图与其余对比度：
-     images/everforest-terminal.png、images/everforest-diff.png、
-     images/everforest-{dark,light}-{hard,soft}.png -->
+### 终端调色板
+
+集成终端中并排展示 normal 与 bright 两组颜色。
+
+![Everforest 终端调色板](images/everforest-terminal.png)
+
+### diff 视图
+
+新增行使用上游 `Background Green` 底色。
+
+![Everforest diff 视图](images/everforest-diff.png)
 
 ## 安装
 
