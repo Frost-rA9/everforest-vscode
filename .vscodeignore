@@ -4,6 +4,7 @@
 .pi/**
 AGENTS.md
 docs/**
+archive/**
 icon.svg
 scripts/**
 node_modules/**
