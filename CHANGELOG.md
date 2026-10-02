@@ -1,5 +1,42 @@
 # Changelog
 
+## [1.0.0] - 2026-10-03
+
+### Changed
+
+- **Rebased the whole extension onto the official Everforest palette** published by
+  [everforest-web](https://github.com/SirEthanator/everforest-web) (pinned to
+  `6f6e3c5b8b`, MIT) instead of the Gogh terminal schemes. Workbench surfaces now use
+  the upstream `Background Dim/0–5`, `Background Visual` and `Background
+  Red/Green/Blue/Yellow/Purple` ramps, the `Grey 0–2` neutrals, and the exact
+  official accents (notably the true orange `#E69875`/`#F57D26` instead of a
+  red+yellow mix).
+- Renamed the extension to **Everforest Remastered** (id `Frost-rA9.everforest`,
+  new Marketplace listing) and bumped to 1.0.0. Theme labels are unchanged.
+- Terminal ANSI colors are now derived from the palette with distinct normal and
+  bright groups (`scripts/palette/ansi.mjs`), replacing the Gogh values.
+
+### Added
+
+- `scripts/palette/everforest-web.mjs` — vendored upstream palette data + provenance.
+- `scripts/palette/ansi.mjs` — documented 16-color terminal derivation.
+- Upstream-consistency validation: editor/terminal backgrounds, chrome and border
+  roles, accent roles, and a per-theme expected-background table.
+- Extended workbench coverage: diff line backgrounds, modified-text tint,
+  sticky-scroll surfaces, sash hover border, terminal border/selection.
+
+### Fixed
+
+- Corrected the Marketplace id recorded for the 0.1.0 release (it is
+  `Frost-rA9.everforest-gogh`, not `Frost-rA9.everforest-vscode`).
+- Light-theme comment/line-number greys are nudged toward the foreground so they
+  stay readable on the darker "soft" background.
+
+### Notes
+
+- The previous `Frost-rA9.everforest-gogh` listing does not receive this update;
+  see the migration section in the README.
+
 ## [0.2.0] - 2026-09-03
 
 ### Added
@@ -42,4 +79,4 @@
 ### Published
 
 - **v0.1.0 released on the VS Code Marketplace** (extension id
-  `Frost-rA9.everforest-vscode`) and GitHub Releases
+  `Frost-rA9.everforest-gogh`) and GitHub Releases
