@@ -11,7 +11,7 @@
   Red/Green/Blue/Yellow/Purple` ramps, the `Grey 0–2` neutrals, and the exact
   official accents (notably the true orange `#E69875`/`#F57D26` instead of a
   red+yellow mix).
-- Renamed the extension to **Everforest Remastered** (id `Frost-rA9.everforest`,
+- Renamed the extension to **Everforest Remastered** (id `Frost-rA9.everforest-remastered`,
   new Marketplace listing) and bumped to 1.0.0. Theme labels are unchanged.
 - Terminal ANSI colors are now derived from the palette with distinct normal and
   bright groups (`scripts/palette/ansi.mjs`), replacing the Gogh values.

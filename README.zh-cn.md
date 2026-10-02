@@ -69,16 +69,16 @@ workbench 界面与 16 色终端调色板都由它派生，没有手工微调的
 在扩展面板搜索 **Everforest Remastered**，或执行：
 
 ```bash
-code --install-extension Frost-rA9.everforest
+code --install-extension Frost-rA9.everforest-remastered
 ```
 
 ### VSIX
 
 从 [Releases](https://github.com/Frost-rA9/everforest-vscode/releases) 下载
-`everforest-<version>.vsix`，然后：
+`everforest-remastered-<version>.vsix`，然后：
 
 ```bash
-code --install-extension everforest-<version>.vsix
+code --install-extension everforest-remastered-<version>.vsix
 ```
 
 ### Remote / WSL
@@ -121,11 +121,11 @@ code --install-extension everforest-<version>.vsix
 
 ## 从 `everforest-gogh` 迁移
 
-扩展 ID 已改为 `Frost-rA9.everforest`，旧的 `Frost-rA9.everforest-gogh` 列表不再收到更新。
+扩展 ID 已改为 `Frost-rA9.everforest-remastered`，旧的 `Frost-rA9.everforest-gogh` 列表不再收到更新。
 迁移步骤：
 
 1. 卸载旧扩展（`code --uninstall-extension Frost-rA9.everforest-gogh`）
-2. 安装 **Everforest Remastered**（`Frost-rA9.everforest`）
+2. 安装 **Everforest Remastered**（`Frost-rA9.everforest-remastered`）
 3. 完成 —— 主题 label 未变，`workbench.colorTheme` 会继续生效
 
 ## 开发
@@ -135,7 +135,7 @@ npm install
 npm run build      # 重新生成 6 个主题 JSON
 npm run validate   # 结构 + 上游一致性 + 对比度校验
 npm run preview    # 渲染模拟 VS Code 布局到 /tmp/efv-preview-<id>.html
-npm run package    # 打包 everforest-<version>.vsix
+npm run package    # 打包 everforest-remastered-<version>.vsix
 ```
 
 调色板数据 vendored 在 `scripts/palette/everforest-web.mjs`，必须与上游一致；VS Code 的

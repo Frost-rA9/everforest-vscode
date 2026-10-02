@@ -78,16 +78,16 @@ Inserted lines pick up the upstream `Background Green` tint.
 Search for **Everforest Remastered** in the Extensions view, or run:
 
 ```bash
-code --install-extension Frost-rA9.everforest
+code --install-extension Frost-rA9.everforest-remastered
 ```
 
 ### VSIX
 
-Download `everforest-<version>.vsix` from
+Download `everforest-remastered-<version>.vsix` from
 [Releases](https://github.com/Frost-rA9/everforest-vscode/releases), then:
 
 ```bash
-code --install-extension everforest-<version>.vsix
+code --install-extension everforest-remastered-<version>.vsix
 ```
 
 ### Remote / WSL
@@ -132,11 +132,11 @@ VS Code's terminal contrast adjustment to 1:
 
 ## Migrating from `everforest-gogh`
 
-The extension id changed to `Frost-rA9.everforest`, so the previous
+The extension id changed to `Frost-rA9.everforest-remastered`, so the previous
 `Frost-rA9.everforest-gogh` listing no longer receives updates. To migrate:
 
 1. Uninstall the old extension (`code --uninstall-extension Frost-rA9.everforest-gogh`)
-2. Install **Everforest Remastered** (`Frost-rA9.everforest`)
+2. Install **Everforest Remastered** (`Frost-rA9.everforest-remastered`)
 3. Done — theme labels are unchanged, so `workbench.colorTheme` keeps working
 
 ## Development
@@ -146,7 +146,7 @@ npm install
 npm run build      # regenerate the six theme JSON files
 npm run validate   # structure + upstream consistency + contrast checks
 npm run preview    # render a mock VS Code layout to /tmp/efv-preview-<id>.html
-npm run package    # build everforest-<version>.vsix
+npm run package    # build everforest-remastered-<version>.vsix
 ```
 
 The palette data is vendored in `scripts/palette/everforest-web.mjs` and must stay
