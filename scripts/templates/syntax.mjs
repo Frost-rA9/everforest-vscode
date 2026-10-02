@@ -1,12 +1,13 @@
-// Syntax token color mapping (tokenColors). The scope→role mapping follows
-// the Everforest conventions, with colors
-// sourced from the Gogh-Co base palette via the derived set.
+// Syntax token color mapping (tokenColors). The scope→role mapping follows the
+// canonical Everforest conventions (equivalent to sainnhe/everforest's default
+// syntax), with colors sourced from the everforest-web palette via the derived
+// set.
 //
-// Role → Gogh color (dark uses the normal group, light uses the bright group):
-//   keyword/error → red | storage/operator → orange (mixed) | string → yellow
-//   function → green | preproc/module/label → cyan | type/class → blue
-//   number/constant → magenta | variable/delimiter → foreground
-//   comment → grey
+// Role → Everforest accent:
+//   keyword/error → red | storage/operator → orange | string → yellow
+//   function → green | preproc/module/label → aqua | type/class → blue
+//   number/constant → purple | variable/delimiter → foreground
+//   comment → Grey 1
 
 /** @param {import("./derived.mjs").Derived} d */
 export function getSyntax(d) {
@@ -48,19 +49,19 @@ export function getSyntax(d) {
       name: "Preproc",
       scope:
         "keyword.control.at-rule, keyword.control.import, keyword.control.export, storage.type.namespace, punctuation.decorator, keyword.control.directive, keyword.preprocessor, punctuation.definition.preprocessor, punctuation.definition.directive, keyword.other.import, keyword.other.package, entity.name.type.namespace, entity.name.scope-resolution, keyword.other.using, keyword.package, keyword.import, keyword.map",
-      settings: { foreground: d.cyan },
+      settings: { foreground: d.aqua },
     },
-    { name: "Annotation", scope: "storage.type.annotation", settings: { foreground: d.cyan } },
+    { name: "Annotation", scope: "storage.type.annotation", settings: { foreground: d.aqua } },
     {
       name: "Label",
       scope: "entity.name.label, constant.other.label",
-      settings: { foreground: d.cyan },
+      settings: { foreground: d.aqua },
     },
     {
       name: "Modules",
       scope:
         "support.module, support.node, support.other.module, support.type.object.module, entity.name.type.module, entity.name.type.class.module, keyword.control.module",
-      settings: { foreground: d.cyan },
+      settings: { foreground: d.aqua },
     },
     {
       name: "Type",
@@ -73,18 +74,18 @@ export function getSyntax(d) {
         "entity.name.type.class, support.class, entity.name.class, entity.other.inherited-class, storage.class",
       settings: { foreground: d.blue },
     },
-    { name: "Number", scope: "constant.numeric", settings: { foreground: d.magenta } },
-    { name: "Boolean", scope: "constant.language.boolean", settings: { foreground: d.magenta } },
+    { name: "Number", scope: "constant.numeric", settings: { foreground: d.purple } },
+    { name: "Boolean", scope: "constant.language.boolean", settings: { foreground: d.purple } },
     {
       name: "Special identifier",
       scope:
         "variable.language.this, variable.language.self, variable.language.super, keyword.other.this, variable.language.special, constant.language.nu",
-      settings: { foreground: d.magenta },
+      settings: { foreground: d.purple },
     },
     {
       name: "Constant",
       scope: "constant.language, support.constant",
-      settings: { foreground: d.magenta },
+      settings: { foreground: d.purple },
     },
     {
       name: "Identifier",
@@ -139,13 +140,13 @@ export function getSyntax(d) {
     {
       name: "Markdown heading6",
       scope: "heading.6.markdown",
-      settings: { foreground: d.magenta, fontStyle: "bold" },
+      settings: { foreground: d.purple, fontStyle: "bold" },
     },
     {
       name: "Markdown link",
       scope:
         "string.other.link.title.markdown, constant.other.reference.link.markdown, string.other.link.description.markdown",
-      settings: { foreground: d.magenta },
+      settings: { foreground: d.purple },
     },
     {
       name: "Markdown link text",
@@ -192,7 +193,7 @@ export function getSyntax(d) {
     {
       name: "CSS property name",
       scope: "support.type.property-name.css",
-      settings: { foreground: d.cyan },
+      settings: { foreground: d.aqua },
     },
     {
       name: "CSS vendored property",
@@ -214,7 +215,7 @@ export function getSyntax(d) {
     {
       name: "CSS at-rule",
       scope: "entity.name.tag.css, keyword.control.at-rule.keyframes.css",
-      settings: { foreground: d.magenta },
+      settings: { foreground: d.purple },
     },
     {
       name: "JSON key",
@@ -262,7 +263,7 @@ export function getSyntax(d) {
     {
       name: "Rust module",
       scope: "entity.name.namespace.rust, storage.type.module.rust",
-      settings: { foreground: d.cyan },
+      settings: { foreground: d.aqua },
     },
     {
       name: "Go type",
@@ -277,7 +278,7 @@ export function getSyntax(d) {
     {
       name: "Go package",
       scope: "entity.name.package.go, keyword.import.go, keyword.package.go",
-      settings: { foreground: d.cyan },
+      settings: { foreground: d.aqua },
     },
 
     // ---- Shell / Dockerfile ----
@@ -289,7 +290,7 @@ export function getSyntax(d) {
     {
       name: "Shell variable",
       scope: "variable.other.normal.shell, variable.other.special.shell, variable.other.positional.shell",
-      settings: { foreground: d.magenta },
+      settings: { foreground: d.purple },
     },
     {
       name: "Shell string",
@@ -304,7 +305,7 @@ export function getSyntax(d) {
     {
       name: "Dockerfile image",
       scope: "entity.name.type.base-image.dockerfile, entity.name.image.dockerfile",
-      settings: { foreground: d.magenta }
+      settings: { foreground: d.purple }
     },
 
     // ---- YAML / TOML ----
@@ -321,7 +322,7 @@ export function getSyntax(d) {
     {
       name: "YAML anchor",
       scope: "punctuation.definition.anchor.yaml, punctuation.definition.block.sequence.item.yaml",
-      settings: { foreground: d.cyan },
+      settings: { foreground: d.aqua },
     },
     {
       name: "TOML key",

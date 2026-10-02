@@ -64,7 +64,7 @@ function render(theme, id) {
     </div>`;
 
   const lines = [
-    [["// Everforest (Gogh) demo — TypeScript", "comment"]],
+    [["// Everforest Remastered demo — TypeScript", "comment"]],
     [["import ", "keyword"], ["{ readFile }", "orange"], [" from ", "keyword"], ["\"node:fs\"", "yellow"], [";", "identifier"]],
     [["", ""]],
     [["interface ", "keyword"], ["User", "blue"], [" {", "identifier"]],
@@ -125,7 +125,7 @@ function render(theme, id) {
     .statusbar { height: ${stat}px; background: ${c["statusBar.background"]}; color: ${c["statusBar.foreground"]}; display:flex; align-items:center; font-size:11px; padding: 0 10px; gap: 16px; }
     .badge { background: ${c["badge.background"]}; color: ${c["badge.foreground"]}; border-radius: 10px; padding: 0 8px; font-size: 11px; }
   </style></head><body>
-    <div class="titlebar">Everforest (Gogh) — ${esc(theme.name)}</div>
+    <div class="titlebar">Everforest Remastered — ${esc(theme.name)}</div>
     <div class="layout">
       <div class="activity">
         <div class="icon active">◫</div><div class="icon">⌕</div><div class="icon">⑂</div><div class="icon">◉</div>
@@ -143,7 +143,7 @@ function render(theme, id) {
       <span>⎇ main</span><span>◐ 0 ↓ 0 ↑ 0</span>
       <span style="flex:1"></span>
       <span>Ln 24, Col 12</span><span>UTF-8</span><span>TypeScript</span>
-      <span class="badge">6</span><span>Everforest (Gogh)</span>
+      <span class="badge">6</span><span>Everforest Remastered</span>
     </div>
   </body></html>`;
 
