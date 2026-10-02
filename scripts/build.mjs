@@ -1,4 +1,4 @@
-// Build script: generate the 6 theme JSON files from the Gogh-Co palettes.
+// Build script: generate the 6 theme JSON files from the everforest-web palette.
 //   node scripts/build.mjs
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
