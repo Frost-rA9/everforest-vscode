@@ -130,7 +130,7 @@ VS Code's terminal contrast adjustment to 1:
 }
 ```
 
-## Migrating from 0.2.0 (`everforest-gogh`)
+## Migrating from `everforest-gogh`
 
 The extension id changed to `Frost-rA9.everforest`, so the previous
 `Frost-rA9.everforest-gogh` listing no longer receives updates. To migrate:

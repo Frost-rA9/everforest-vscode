@@ -119,7 +119,7 @@ code --install-extension everforest-<version>.vsix
 }
 ```
 
-## 从 0.2.0（`everforest-gogh`）迁移
+## 从 `everforest-gogh` 迁移
 
 扩展 ID 已改为 `Frost-rA9.everforest`，旧的 `Frost-rA9.everforest-gogh` 列表不再收到更新。
 迁移步骤：
